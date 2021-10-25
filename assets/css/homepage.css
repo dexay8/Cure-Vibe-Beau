@@ -65,5 +65,6 @@ body{
 }
 #menubar ul li span{
     color: white;  
-    font-family: 'Julius Sans One', sans-serif;   
+    font-family: 'Julius Sans One', sans-serif; 
+    font-weight: 900;  
 }
