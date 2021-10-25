@@ -1,4 +1,179 @@
-body{
-    background-image: url(../images/bg.jpg);
+
+html,
+body {
+    /* margin: 0; */
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
+    background-image: url(../images/bg.jpg);
+}
+
+/*-------------------------- BACKGROUND IMAGES AND BACKGROUND COLORS */
+
+.logo-name{
+    font-family: 'Cinzel', serif;
+    font-size: 70px;
+    /* font-weight: bold; */
+    color: rgb(253, 255, 254);
+}
+
+.wrap{
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    padding-top: 0.5px;
+    padding-bottom: 1.5px;
+    margin-bottom: 20px;
+}
+
+.display {
+    background-color: rgba(49, 231, 186, 0.3);
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.container{
+    margin: 0 auto; 
+    float: none; 
+}
+
+/* --------------------------BUTTON STYLING */
+
+.ishtyle{
+    /* font-family: 'Sacramento', cursive; */
+    font-size: 40px;
+    color: rgb(2, 41, 41);
+    /* font-weight: bold; */
+}
+
+.cardmid{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card {
+    width: 500px;
+    float: none; 
+    margin-bottom: 10px; 
+}
+
+.card-body{
+    margin: 0 auto; 
+    float: none; 
+}
+
+/* -----------------MAIN STYLING */
+
+.header-large{
+    color: white;
+    font-family: "Pacifico", cursive;
+    font-size: 2em;
+    text-transform: capitalize;
+}
+
+.date-large{
+    color: white;
+    font-family: "Mali", cursive;
+    font-size: 1rem;
+}
+
+.temp-large{
+    font-family: "Mali", cursive;
+    color: #f1f6f9;
+    font-size: 3em;
+}
+
+.temp-btn{
+    color: white;
+    font-family: "Mali", cursive;
+    cursor: pointer;
+    background: none;
+    border: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.temp-btn:hover {
+    color: #f5b461;
+}
+
+.temp-btn:focus {
+    outline: #6bc5d7;
+}
+
+.separator{
+    color: #f1f6f9;
+    font-size: 1em;
+}
+
+.description-large{
+    color: white;
+    font-family: "Pacifico", cursive;
+    font-size: 1.5rem;
+}
+
+.conditions{
+    font-family: "Mali", cursive;
+    color: #f1f6f9;
+    font-size: 1em;
+}
+
+.forecast-icon {
+    width: 50px;
+    height: auto;
+}
+
+.small {
+    margin-top: 20px;
+    color: #f1f6f9;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.small a {
+    text-decoration: none;
+    font-style: italic;
+    color: rgb(141, 41, 235);
+    transition: all 0.5s ease-in-out;
+}
+
+.small a:hover {
+    color: #fff676;
+}
+
+
+.active {
+    color: #f5b461;
+    font-family: "Mali", cursive;
+    font-size: 1.2em;
+    cursor: none;
+    font-weight: bolder;
+}
+
+
+/* -------------------- RESPONSIVE MEDIA QUERIES */
+
+
+@media only screen and (max-width: 768px) {
+    .header-large {
+        font-size: 1.2em;
+    }
+    .temp-large {
+        font-size: 3em;
+    }
+    .description-large {
+        text-align: center;
+        font-size: 1em;
+    }
+    .conditions {
+        text-align: center;
+        font-size: 0.8em;
+    }
+    .forcast-icon {
+        width: 50px;
+        height: auto;
+    }
 }
