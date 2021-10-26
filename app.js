@@ -11,6 +11,10 @@ app.get('/',function(req,res){
     res.sendFile(path.join(__dirname+'/views/homepage.html'));
     //__dirname : It will resolve to your project folder.
   });
+  app.get('/tests',function(req,res){
+    res.sendFile(path.join(__dirname+'/views/tests.html'));
+    //__dirname : It will resolve to your project folder.
+  });
 const port=process.env.PORT||5000
  
 app.listen(port,()=>{
