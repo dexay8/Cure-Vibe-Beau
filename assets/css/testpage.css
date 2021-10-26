@@ -1,0 +1,79 @@
+/*-------------------------- BASE HOMEPAGE CSS BEGINS-------------- */
+body{
+    font-family: 'Julius Sans One', sans-serif; 
+}
+    #logo img{
+    height: 20%;
+    width: 20%;
+}
+#logo button{
+   float: right;
+   margin-right: 2px;
+   padding: auto;
+    background-color: transparent;
+    border-color: purple;
+    text-align: center;
+}
+#logo svg{
+    height: fit-content;
+ }
+#logo button span{
+    text-align: center;
+    padding-bottom: 5px;
+}
+#menubar{
+    margin-top: 0px;
+    height: 200px;
+    width: auto;
+    background-image: url(../images/img-homopage.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#menubar svg{
+    float: right;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+#menubar button{
+    float: right;
+    color: white;
+    padding: 5px;
+    background-color: transparent;
+    margin-right: 10px;
+}
+#menubar button span{
+    margin-top: 8px;
+    
+    font-size: large;
+}
+#menubar button svg{
+    padding: 5px;
+    height: fit-content;
+    width: fit-content;
+}
+
+#menubar ul li{
+    background-color: transparent;
+    align-items: center;
+    margin-left: 4em;
+    margin-top: 10em;
+    vertical-align:bottom;
+    line-height:2em;   
+}
+#menubar ul li :hover{
+    background-color: mediumpurple;
+    padding: auto;     
+}
+#menubar ul li span{
+    color: white;  
+    font-family: 'Julius Sans One', sans-serif; 
+    font-weight: 900;  
+}
+/*-------------------------- BASE HOMEPAGE ENDS HERE *********/
+#cardslist {
+   align-items: center;
+     
+}
+div#solocard{
+    margin: 0 auto;
+}
