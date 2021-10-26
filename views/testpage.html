@@ -22,40 +22,30 @@
 
 
 
-<!-- ----------------------------------------CARDS---------------------------------- -->
+<!-- ----------------------------------------BASE HOME---------------------------------- -->
 
 <body>
   
     <div id="logo">
         <img src="/images/logo-homepage.png" alt="">
-        <button type="button" class="btn btn-outline-danger">
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="purple" class="bi bi-envelope"
-                viewBox="0 0 16 16">
-                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694
-                      3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"></path>
-            </svg>
-            <span>Contact Us !</span>
-        </button>
+        <button type="button" class="btn btn-info"><span class="material-icons">
+            contact_mail
+            </span><span>Contact Us</span></button>
     </div>
 
     <div id="menubar">
     <div><button type="button" class="btn btn-outline-danger">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                class="bi bi-person-square" viewBox="0 0 16 16">
-                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
-                <path
-                    d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12z">
-                </path>
-            </svg>
+            <span class="material-icons">
+                account_circle
+                </span>
             <span> Profile </span>
         </button> </div>
-    <div id="cart"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-bag-check"
-            viewBox="0 0 16 16">
-            <path fill-rule="evenodd"
-                d="M10.854 8.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
-            <path
-                d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
-        </svg></div>
+        <div><button type="button" class="btn btn-outline-danger">
+            <span class="material-icons">
+                shopping_cart
+                </span>
+            <span> Checkout </span>
+        </button> </div>
     <ul class="nav nav-pills">
         <li class="nav-item">
             <a class="nav-link active" href="/shop"><span>SHOP MEDICINES AND EQUIPMENTS</span></a>
@@ -78,13 +68,30 @@
         </li>
     </ul>
 </div>
+<!-- ----------------------------------------CARDS---------------------------------- -->
 
     <div class="container">
-
         <div class="card">
             <div class="box">
                 <div class="content">
                     <h2>01</h2>
+                    <h3 style="color: rgba(156, 6, 6, 0.863);"> COVID-19 RT-PCR TEST </h3>
+                    <p>
+                        RT-PCR Test is a real-time reverse transcription polymerase chain reaction (rRT-PCR) test for the qualitative detection of nucleic acid from SARS-CoV-2 virus
+                    </p>
+                    <p style="font-weight: 800; color: antiquewhite;">₹600</p>
+                    <a href="#"> Book
+                        <span class="material-icons">
+                            bloodtype
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="box">
+                <div class="content">
+                    <h2>02</h2>
                     <h3> TOTAL ERYTHROCYTE COUNT </h3>
                     <p>
                         Total erythrocyte count gives the number of RBCs present in blood used for detecting abnormalities in blood production, A high level indicates polycythemia and low levels indicate anemias  
@@ -102,7 +109,7 @@
         <div class="card">
             <div class="box">
                 <div class="content">
-                    <h2>02</h2>
+                    <h2>03</h2>
                     <h3> TOTAL LEUCOCYTE COUNT (TLC) </h3>
                     <p>
                         Total leucocyte count gives the number of WBCs present in blood, a part of laboratory routine test to assess the nature and severity of infection and the response of body’s defense capability
@@ -120,7 +127,7 @@
         <div class="card">
             <div class="box">
                 <div class="content">
-                    <h2>03</h2>
+                    <h2>04</h2>
                     <h3> DIFFERENTIATED LEUCOCYTE COUNT (DLC)  </h3>
                     <p>
             
@@ -140,7 +147,7 @@
         <div class="card">
             <div class="box">
                 <div class="content">
-                    <h2>04</h2>
+                    <h2>05</h2>
                     <h3> ERYTHROCYTE SEDIMENTATION RATE (ESR)</h3>
                     <p>
                         Simple, non-specific test for measuring the inflammation in the body due to tendency of RBCs to settle in diseased conditions
@@ -158,7 +165,7 @@
         <div class="card">
             <div class="box">
                 <div class="content">
-                    <h2>05</h2>
+                    <h2>06</h2>
                     <h3> HEMOGLOBIN CONCENTRATION</h3>
                     <p>
                         Routine laboratory test for determining disorders such as anemias, chronic diseases, tuberculosis etc. 
@@ -176,7 +183,7 @@
         <div class="card">
             <div class="box">
                 <div class="content">
-                    <h2>06</h2>
+                    <h2>07</h2>
                     <h3> PLATELET COUNT</h3>
                     <p>
                         Determines the number of platelets which are essential for proper clotting of blood abnormalities in platelet indicates bleeding disorders
@@ -194,7 +201,7 @@
         <div class="card">
             <div class="box">
                 <div class="content">
-                    <h2>07</h2>
+                    <h2>08</h2>
                     <h3> CLOTTING TIME/PROTHROMBIN TIME</h3>
                     <p>
                         Assesses the integrity of hemostatic mechanisms for proper clotting of blood in case of any trauma or injury to blood vessels 
@@ -212,7 +219,7 @@
         <div class="card">
             <div class="box">
                 <div class="content">
-                    <h2>08</h2>
+                    <h2>09</h2>
                     <h3> FIBRINOGEN ACTIVITY TEST</h3>
                     <p>
                         A fibrinogen activity test assesses the part of clotting mechanism in which fibrinogen is converted to fibrin threads, required for proper clotting of blood
@@ -230,7 +237,7 @@
         <div class="card">
             <div class="box">
                 <div class="content">
-                    <h2>09</h2>
+                    <h2>10</h2>
                     <h3> HEMOGLOBIN 1AC</h3>
                     <p>
                         This test measures the average value of blood glucose for the past months and is helpful for diagnosing and managing diabetes 
@@ -248,7 +255,7 @@
         <div class="card">
             <div class="box">
                 <div class="content">
-                    <h2>10</h2>
+                    <h2>11</h2>
                     <h3> ENZYMOLOGY </h3>
                     <p>
                         Contains various blood test which measure the normal level of various enzymes such as ALT, SGOT, SGPT, CPKMB required for diagnostic values in liver heart and brain disorders respectively
@@ -266,7 +273,7 @@
         <div class="card">
             <div class="box">
                 <div class="content">
-                    <h2>11</h2>
+                    <h2>12</h2>
                     <h3> LIPID PROFILE TEST</h3>
                     <p>
                         Lipid profile tests are used to find various abnormalities in the synthesis and transport of lipid such as cholesterol, triglycerides, and lipoprotein and to ascertain risks of cardiac diseases
@@ -284,7 +291,7 @@
         <div class="card">
             <div class="box">
                 <div class="content">
-                    <h2>12</h2>
+                    <h2>13</h2>
                     <h3> LIVER FUNCTION TEST</h3>
                     <p>
                         
@@ -303,7 +310,7 @@
         <div class="card">
             <div class="box">
                 <div class="content">
-                    <h2>13</h2>
+                    <h2>14</h2>
                     <h3> BLOOD SUGAR TEST</h3>
                     <p>
                         
@@ -322,7 +329,7 @@
         <div class="card">
             <div class="box">
                 <div class="content">
-                    <h2>14</h2>
+                    <h2>15</h2>
                     <h3> THYROID PROFILE</h3>
                     <p>
                         Group of tests that help to evaluate thyroid function, determines the level of hormones like triiodothyronine and tetraiodothyronine Thyroid hormones play an important role in maintaining the basal metabolic rate of the body
@@ -340,7 +347,7 @@
         <div class="card">
             <div class="box">
                 <div class="content">
-                    <h2>15</h2>
+                    <h2>16</h2>
                     <h3> SERUM CALCIUM TEST </h3>
                     <p>
                         
@@ -359,7 +366,7 @@
         <div class="card">
             <div class="box">
                 <div class="content">
-                    <h2>16</h2>
+                    <h2>17</h2>
                     <h3> SERUM IRON TEST </h3>
                     <p>
                         
@@ -379,7 +386,7 @@
         <div class="card">
             <div class="box">
                 <div class="content">
-                    <h2>17</h2>
+                    <h2>18</h2>
                     <h3> RENAL FUNCTION TEST</h3>
                     <p>  
                         These tests determine proper kidney function and to diagnose any Kidney disorders, various metabolites are filtered by the kidneys and their presence in the blood or urine may show defective renal function
@@ -397,7 +404,7 @@
         <div class="card">
             <div class="box">
                 <div class="content">
-                    <h2>18</h2>
+                    <h2>19</h2>
                     <h3> URINE TEST </h3>
                     <p>
                         URINE TEST
@@ -417,7 +424,7 @@
         <div class="card">
             <div class="box">
                 <div class="content">
-                    <h2>19</h2>
+                    <h2>20</h2>
                     <h3> VITAMIN B COMPLEX TEST </h3>
                     <p>
                         
@@ -437,7 +444,7 @@
         <div class="card">
             <div class="box">
                 <div class="content">
-                    <h2>20</h2>
+                    <h2>21</h2>
                     <h3>25 DEHYDROXY VITAMIN D TEST </h3>
                     <p>
                         Indicates the level of Vitamin D in the blood; 25dehydroxyvitamin D is the major form of vitamin D present in the blood, Vitamin D is essential for growth and formation of bones and plays a role in calcium homeostasis

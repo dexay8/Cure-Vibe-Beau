@@ -3,24 +3,29 @@ body{
     font-family: 'Julius Sans One', sans-serif; 
     /* display: block; */
 }
-    #logo img{
+#logo img{
     height: 20%;
     width: 20%;
 }
 #logo button{
    float: right;
+   margin-top: 5px;
    margin-right: 2px;
-   padding: auto;
+   padding: 0 auto;
     background-color: transparent;
     border-color: purple;
     text-align: center;
 }
 #logo svg{
-    height: fit-content;
+    height: auto;
  }
 #logo button span{
-    text-align: center;
-    padding-bottom: 5px;
+    color: rgb(26, 62, 73);
+    font-weight: 600;
+    font-size: 20px;
+    padding: 8px;
+    padding-right: 4px;
+    size-adjust: auto;
 }
 #menubar{
     margin-top: 0px;
@@ -32,30 +37,28 @@ body{
 }
 #menubar svg{
     float: right;
-    margin-right: 10px;
-    margin-top: 5px;
+    margin-right: 5px;
+    margin-top: 0px;
 }
 #menubar button{
     float: right;
     color: white;
-    padding: 5px;
-    background-color: transparent;
+    padding: 8px;
     margin-right: 10px;
+    background-color: rgb(26, 62, 73);
+    
 }
 #menubar button span{
     margin-top: 8px;
-    
     font-size: large;
+    padding-left: 0px;
+    padding-top: 0px;
 }
-#menubar button svg{
-    padding: 5px;
-    height: fit-content;
-    width: fit-content;
-}
-
 #menubar ul li{
     background-color: transparent;
     align-items: center;
+    display: inline-flex;
+    flex-direction: row;
     margin-left: 4em;
     margin-top: 10em;
     vertical-align:bottom;
