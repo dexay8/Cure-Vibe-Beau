@@ -63,7 +63,7 @@
                         </div>
             
                         <button class="btn btn-primary btn-lg btn-block" type="submit">Login | Sign Up</button>
-            
+            <button class="btn btn-primary btn-lg" id="googlelogin">Sign in with google</button>
                       </div>
                     </div>
                   </div>
@@ -83,6 +83,35 @@
         integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
         crossorigin="anonymous">
         </script>
+<script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-auth-compat.js"></script>
+        <script>
+         
+          const config = {
+  apiKey: "AIzaSyDW5-Szhn5ruui9xPVGqDGQ5ObQ2VYma8k",
+  authDomain: "cure-vibe-beau.firebaseapp.com",
+  projectId: "cure-vibe-beau",
+  storageBucket: "cure-vibe-beau.appspot.com",
+  messagingSenderId: "262834749571",
+  appId: "1:262834749571:web:09da42fa5c78eee9b0dbb6",
+  measurementId: "G-SXR0ZGKPD7"
+};
+firebase.initializeApp(config);
+ const auth = firebase.auth();
+ const firestore = firebase.firestore();
+
+ var googlelogin=document.getElementById('googlelogin');
+ googlelogin.onclick=function(){
+   var provider=new firebase.auth.GoogleAuthProvider();
+   firebase.auth().signInWithPopup(provider).then(function(response){
+    window.location = '/home'
+   }).catch(function(error){
+     console.log(error);
+   })
+ }
+        </script>
+      
     </body>
 
 </body>
