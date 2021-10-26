@@ -14,7 +14,6 @@ body{
     background-color: transparent;
     border-color: purple;
     text-align: center;
-    font-weight: 700;
 }
 #logo svg{
     height: fit-content;
