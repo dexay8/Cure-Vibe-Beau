@@ -27,6 +27,10 @@ app.get('/',function(req,res){
     res.sendFile(path.join(__dirname+'/views/reportpage.html'));
     //__dirname : It will resolve to your project folder.
   });
+  app.get('/checkout',function(req,res){
+    res.sendFile(path.join(__dirname+'/views/checkoutpage.html'));
+    //__dirname : It will resolve to your project folder.
+  });
 const port=process.env.PORT||5000
  
 app.listen(port,()=>{
