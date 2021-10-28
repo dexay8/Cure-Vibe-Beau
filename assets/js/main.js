@@ -132,7 +132,7 @@ var data = [{
 
 
     const tempdata=[];
-    const checkoutcontainer=document.querySelector('.checkoutcontainer');
+
     let books=document.querySelectorAll('.book');
     for(let i=0;i<books.length;i++)
     {
@@ -201,6 +201,24 @@ function onloadcartnumber () {
     else
     localStorage.setItem("totalcost",product.Price);
  }
+
+ function displaycart (){
+   let cartitems=localStorage.getItem("productsincart");
+   cartitems=JSON.parse(cartitems);
+   let checkoutcontainer=document.querySelector(".checkoutcontainer");
+   console.log(checkoutcontainer);
+   if(cartitems&&checkoutcontainer){
+      checkoutcontainer.innerHTML='';
+      Object.values(cartitems).map(item=>{
+       
+      const li=document.createElement('li');
+      li.innerHTML=item.Test;
+     checkoutcontainer.appendChild(li);
+      })
+   }
+}
+
+displaycart();
 onloadcartnumber();
 
 
