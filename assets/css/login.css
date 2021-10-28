@@ -1,179 +1,196 @@
 
-html,
-body {
-    /* margin: 0; */
-    padding: 0px;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url(../images/bg.jpg);
-}
+/* background-image: url(../images/bg.jpg); */
 
-/*-------------------------- BACKGROUND IMAGES AND BACKGROUND COLORS */
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 
-.logo-name{
-    font-family: 'Cinzel', serif;
-    font-size: 70px;
-    /* font-weight: bold; */
-    color: rgb(253, 255, 254);
-}
-
-.wrap{
-    background-size: cover;
-    background-position: center;
+*
+{
     margin: 0;
     padding: 0;
-    padding-top: 0.5px;
-    padding-bottom: 1.5px;
-    margin-bottom: 20px;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
 }
 
-.display {
-    background-color: rgba(49, 231, 186, 0.3);
-    border-radius: 10px;
-    margin: 0 auto;
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background: #03a9f4; */
+    background-image: url(../images/bg.jpg);
+    transition: 0.5s;
+}
+
+body.active{
+    /* background: #f43648; */
+    background-image: url(../images/img4bg.jpg);
 }
 
 .container{
-    margin: 0 auto; 
-    float: none; 
+    position: relative;
+    width: 800px;
+    height: 500px;
+    margin: 20px;
+    /* background: #ff0; */
 }
 
-/* --------------------------BUTTON STYLING */
-
-.ishtyle{
-    /* font-family: 'Sacramento', cursive; */
-    font-size: 40px;
-    color: rgb(2, 41, 41);
-    /* font-weight: bold; */
+.blueBg{
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.15);
 }
 
-.cardmid{
-    margin-left: auto;
-    margin-right: auto;
+.blueBg .box{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.card {
-    width: 500px;
-    float: none; 
-    margin-bottom: 10px; 
+.blueBg .box h2{
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
-.card-body{
-    margin: 0 auto; 
-    float: none; 
-}
-
-/* -----------------MAIN STYLING */
-
-.header-large{
-    color: white;
-    font-family: "Pacifico", cursive;
-    font-size: 2em;
-    text-transform: capitalize;
-}
-
-.date-large{
-    color: white;
-    font-family: "Mali", cursive;
-    font-size: 1rem;
-}
-
-.temp-large{
-    font-family: "Mali", cursive;
-    color: #f1f6f9;
-    font-size: 3em;
-}
-
-.temp-btn{
-    color: white;
-    font-family: "Mali", cursive;
+.blueBg .box button{
     cursor: pointer;
-    background: none;
+    padding: 10px 20px;
+    background: #fff;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
     border: none;
-    transition: all 0.5s ease-in-out;
 }
 
-.temp-btn:hover {
-    color: #f5b461;
+.formBx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.25);
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
 }
 
-.temp-btn:focus {
-    outline: #6bc5d7;
+.formBx.active{
+    left: 50%;
 }
 
-.separator{
-    color: #f1f6f9;
-    font-size: 1em;
+.formBx .form{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 50px;
+    transition: 0.5s;
 }
 
-.description-large{
-    color: white;
-    font-family: "Pacifico", cursive;
-    font-size: 1.5rem;
+.formBx .signinForm{
+    transition-delay: 0.15s;
 }
 
-.conditions{
-    font-family: "Mali", cursive;
-    color: #f1f6f9;
-    font-size: 1em;
+.formBx.active .signinForm{
+    left: -100%;
+    transition-delay: 0s;
+}   
+
+.formBx .signupForm{
+    left: 100%;
+    transition-delay: 0s;
 }
 
-.forecast-icon {
-    width: 50px;
-    height: auto;
+.formBx.active .signupForm{
+    left: 0;
+    transition-delay: 0.15s;
 }
 
-.small {
-    margin-top: 20px;
-    color: #f1f6f9;
-    font-family: 'Source Code Pro', monospace;
+.formBx .form form{
+    width: 100%;
 }
 
-.small a {
-    text-decoration: none;
-    font-style: italic;
-    color: rgb(141, 41, 235);
-    transition: all 0.5s ease-in-out;
+.formBx .form form h3{
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 500;
 }
 
-.small a:hover {
-    color: #fff676;
+.formBx .form form input{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    outline: none;
+    font-size: 16px;
+    border: 1px solid #333;
+}
+
+.formBx .form form input[type="submit"]{
+    background: #03a9f4;
+    border: none;
+    color: #fff;
+    max-width: 100px;
+    cursor: pointer;
+}
+
+.formBx.active .signupForm input[type="submit"]{
+    background: #000000;
+}
+
+.formBx .form form .forgot{
+    color: #333;
 }
 
 
-.active {
-    color: #f5b461;
-    font-family: "Mali", cursive;
-    font-size: 1.2em;
-    cursor: none;
-    font-weight: bolder;
-}
-
-
-/* -------------------- RESPONSIVE MEDIA QUERIES */
-
-
-@media only screen and (max-width: 768px) {
-    .header-large {
-        font-size: 1.2em;
+@media (max-width: 991px){
+    .container{
+        max-width: 400px;
+        height: 650px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-    .temp-large {
-        font-size: 3em;
+
+    .container .blueBg{
+        top: 0;
+        height: 100%;
     }
-    .description-large {
-        text-align: center;
-        font-size: 1em;
+
+    .formBx{
+        width: 100%;
+        height: 500px;
+        top: 0;
+        box-shadow: none;
     }
-    .conditions {
-        text-align: center;
-        font-size: 0.8em;
+
+    .blueBg .box{
+        position: absolute;
+        width: 100%;
+        height: 150px;
+        bottom: 0;
     }
-    .forcast-icon {
-        width: 50px;
-        height: auto;
+
+    .box.signin{
+        top: 0;
+    }
+
+    .formBx.active{
+        left: 0;
+        top: 150px;
     }
 }
