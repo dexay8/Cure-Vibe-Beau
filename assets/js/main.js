@@ -129,19 +129,21 @@ function onloadcartnumber () {
   const number=parseInt(productnumbers);
    if(number){
   
-      document.querySelector('.cart1').textContent+=productnumbers; 
+      document.querySelector('.cart1').textContent=productnumbers; 
    }
 }
  function cartNumbers () {
     let productnumbers=localStorage.getItem('cart-number');
-   productnumbers=parseInt(productnumbers);
+    productnumbers=parseInt(productnumbers);
    if(productnumbers)
    {
       localStorage.setItem('cart-number',productnumbers+1);
+      document.querySelector('.cart1').textContent=productnumbers+1;
 
    }
    else{
       localStorage.setItem('cart-number',1);
+      document.querySelector('.cart1').textContent=1;
    }
  }
 onloadcartnumber();
