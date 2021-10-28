@@ -1,5 +1,6 @@
 
 
+
 var data = [{
     id:1,
     Test:'COVID-19 RT-PCR TEST',
@@ -109,13 +110,40 @@ var data = [{
 
 
     const tempdata=[];
+    const checkoutcontainer=document.querySelector('.checkoutcontainer');
     let books=document.querySelectorAll('.book');
     for(let i=0;i<books.length;i++)
     {
  books[i].addEventListener('click',()=>{
   const temp=data.filter(user => user.id=== i+1);
-    tempdata.push(temp);
-    console.log(tempdata);
+  const li=document.createElement('li');
+  li.innerHTML=temp[0].Test;
+localStorage.setItem(i,temp[0].Test)
+
+    console.log(temp[0].Test);
+    cartNumbers();
  })
+    }
+function onloadcartnumber () {
+   let productnumbers=localStorage.getItem('cart-number');
+  const number=parseInt(productnumbers);
+   if(number){
+  
+      document.querySelector('.cart1').textContent+=productnumbers; 
+   }
 }
+ function cartNumbers () {
+    let productnumbers=localStorage.getItem('cart-number');
+   productnumbers=parseInt(productnumbers);
+   if(productnumbers)
+   {
+      localStorage.setItem('cart-number',productnumbers+1);
+
+   }
+   else{
+      localStorage.setItem('cart-number',1);
+   }
+ }
+onloadcartnumber();
+
 
