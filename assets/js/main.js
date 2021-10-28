@@ -1,110 +1,132 @@
 
 
 
+
 var data = [{
     id:1,
     Test:'COVID-19 RT-PCR TEST',
     Price:600,
+    inCart:0
     },
     {
     id:2,
     Test:'TOTAL ERYTHROCYTE COUNT',
     Price:400,
+    inCart:0
     },
     {
     id:3,
     Test:'TOTAL LEUCOCYTE COUNT (TLC)',
-    Price:400
+    Price:400,
+    inCart:0
     },
     {
     id:4,
     Test:'DIFFERENTIATED LEUCOCYTE COUNT (DLC)',
-    Price:400
+    Price:400,
+    inCart:0
     },
     {
     id:5,
     Test:'ERYTHROCYTE SEDIMENTATION RATE (ESR)',
-    Price:400
+    Price:400,
+    inCart:0
     },
     {
     id:6,
     Test:'HEMOGLOBIN CONCENTRATION',
-    Price:400
+    Price:400,
+    inCart:0
     },
     {
     id:7,
     Test:'PLATELET COUNT',
-    Price:400
+    Price:400,
+    inCart:0
     },
     {
     id:8,
     Test:'CLOTTING TIME/PROTHROMBIN TIME',
-    Price:300
+    Price:300,
+    inCart:0
     },
     {
     id:9,
     Test:'FIBRINOGEN ACTIVITY TEST',
-    Price:600
+    Price:600,
+    inCart:0
     },
     {
     id:10,
     Test:'HEMOGLOBIN 1AC',
-    Price:520
+    Price:520,
+    inCart:0
     },
     {
     id:11,
     Test:'ENZYMOLOGY',
-    Price:875
+    Price:875,
+    inCart:0
     },
     {
     id:12,
     Test:'LIPID PROFILE TEST',
-    Price:375
+    Price:375,
+    inCart:0
     },
     {
     id:13,
     Test:'LIVER FUNCTION TEST',
-    Price:415
+    Price:415,
+    inCart:0
     },
     {
     id:14,
     Test:'BLOOD SUGAR TEST',
-    Price:50
+    Price:50,
+    inCart:0
     },
     {
     id:15,
     Test:'THYROID PROFILE',
-    Price:375
+    Price:375,
+    inCart:0
     },
     {
     id:16,
     Test:'SERUM CALCIUM TEST',
-    Price:175
+    Price:175,
+    inCart:0
     },
     {
     id:17,
     Test:'SERUM IRON TEST',
-    Price:575
+    Price:575,
+    inCart:0
     },
     {
     id:18,
     Test:'RENAL FUNCTION TEST',
-    Price:1275
+    Price:1275,
+    inCart:0
     },
     {
     id:19,
     Test:'URINE TEST',
-    Price:275
+    Price:275,
+    inCart:0
     },
     {
     id:20,
     Test:'VITAMIN B COMPLEX TEST',
-    Price:1600
+    Price:1600,
+    inCart:0
     },
     {
     id:21,
     Test:'25 DEHYDROXY VITAMIN D TEST',
-    Price:900
+    Price:900,
+    inCart:0
     },
     ];
 
@@ -120,8 +142,9 @@ var data = [{
   li.innerHTML=temp[0].Test;
 localStorage.setItem(i,temp[0].Test)
 
-    console.log(temp[0].Test);
-    cartNumbers();
+   // console.log(temp[0].Test);
+   totalcost(data[i]);
+    cartNumbers(data[i]);
  })
     }
 function onloadcartnumber () {
@@ -132,7 +155,8 @@ function onloadcartnumber () {
       document.querySelector('.cart1').textContent=productnumbers; 
    }
 }
- function cartNumbers () {
+ function cartNumbers (product) {
+    console.log("product clicked is ",product)
     let productnumbers=localStorage.getItem('cart-number');
     productnumbers=parseInt(productnumbers);
    if(productnumbers)
@@ -145,6 +169,39 @@ function onloadcartnumber () {
       localStorage.setItem('cart-number',1);
       document.querySelector('.cart1').textContent=1;
    }
+   setitems(product);
+ }
+ function setitems(product){
+    let cartitems=localStorage.getItem('productsincart');
+    cartitems=JSON.parse(cartitems);
+    if(cartitems!=null)
+    {
+       if(cartitems[product.Test]==undefined){
+          cartitems={
+             ...cartitems,
+             [product.Test]:product
+          }
+       }
+       cartitems[product.Test].inCart+=1;
+    } else{
+       product.inCart=1;
+       cartitems={
+          [product.Test]:product
+       }
+    }
+
+    localStorage.setItem('productsincart',JSON.stringify(cartitems));
+ }
+ function totalcost(product){
+
+    let cartcost=localStorage.getItem('totalcost');
+    if(cartcost!=null)
+    {
+       cartcost=parseInt(cartcost);
+     localStorage.setItem("totalcost",cartcost+product.Price)
+    }
+    else
+    localStorage.setItem("totalcost",product.Price);
  }
 onloadcartnumber();
 
