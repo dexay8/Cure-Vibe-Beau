@@ -205,16 +205,33 @@ function onloadcartnumber () {
  function displaycart (){
    let cartitems=localStorage.getItem("productsincart");
    cartitems=JSON.parse(cartitems);
-   let checkoutcontainer=document.querySelector(".checkoutcontainer");
+   let checkoutcontainer=document.querySelector(".product");
+   
    console.log(checkoutcontainer);
    if(cartitems&&checkoutcontainer){
       checkoutcontainer.innerHTML='';
       Object.values(cartitems).map(item=>{
-       
-      const li=document.createElement('li');
-      li.innerHTML=item.Test;
-     checkoutcontainer.appendChild(li);
+       checkoutcontainer.innerHTML+=`<div class="product row">
+       <div class="item ml-3 col-sm">
+       <span>${item.Test}</span>
+       </div>
+       <div class="price col-sm">
+       <span>${item.Price}</span>
+       </div>
+       <div class="quantity col-sm"><span>${item.inCart}<span></div>
+       <div class="total col-sm"><span>${item.inCart*item.Price}</span></div>
+       </div>`
       })
+      let grandtotal=document.querySelector(".grandtotal");
+      let totalcost=localStorage.getItem('totalcost');
+      grandtotal.innerHTML+=`
+      <div class="grandtotal mt-4">
+
+      <span>Total payable amount</span>
+      <span>${totalcost}</span>
+      </div>
+      
+      `
    }
 }
 

@@ -1,0 +1,15 @@
+.price span{
+color:blue;
+}
+.quantity span{
+    color: red;
+}
+.grandtotal span{
+    color:green;
+}
+.total span{
+    color:indigo
+}
+.item span{
+    color: rgb(122, 122, 4);
+}
