@@ -138,9 +138,7 @@ var data = [{
     {
  books[i].addEventListener('click',()=>{
   const temp=data.filter(user => user.id=== i+1);
-  const li=document.createElement('li');
-  li.innerHTML=temp[0].Test;
-localStorage.setItem(i,temp[0].Test)
+  
 
    // console.log(temp[0].Test);
    totalcost(data[i]);
