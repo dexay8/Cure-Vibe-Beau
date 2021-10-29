@@ -105,9 +105,11 @@ function  createInvoice(tempgenralinfo,tempdata,path) {
    //console.log(foodinfo.length);
 //console.log(foodinfo);
  var n=0; 
-var k=0;
+var k=tempdata.length;
+if(k!=0)
+k=k-1;
     n=tempgenralinfo.length;
-  //  if(n!==0)
+  if(n!==0)
     n=n-1;
 
   //console.log(foodinfo.length);
