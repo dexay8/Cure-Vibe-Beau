@@ -66,6 +66,7 @@ app.get('/',function(req,res){
 
 
 const tempdata=[];
+
 const tempgenralinfo=[{
   Name:'Aryan basu',
   Payement:'Cash',
@@ -123,10 +124,10 @@ var k=0;
 function generateHeader(doc) {
 //console.log(foodinfo);
   doc
-  .image("./assets/images/logo.jpg", 50, 45, { width: 50 })
+  .image("./assets/images/logo.jpg", 40, 35, { width: 120 })
     .fillColor("#444444")
     .fontSize(20)
-    .text("Cure Vibe Beau Inc.", 110, 57)
+    .text("", 110, 57)
     .fontSize(10)
     .text("Cure Vibe Beau Inc.", 200, 50, { align: "right" })
     .text("FASSAI-NO : 1271403800659", 200, 65, { align: "right" })
