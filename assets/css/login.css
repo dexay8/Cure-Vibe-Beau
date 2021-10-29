@@ -147,6 +147,24 @@ body.active{
     max-width: 100px;
     cursor: pointer;
 }
+.btn{
+    background: #03a9f4;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+   border: none;
+
+     
+}
+.btn-signup{
+    background:black;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+   border: none;
+}
 
 .formBx.active .signupForm input[type="submit"]{
     background: #000000;
