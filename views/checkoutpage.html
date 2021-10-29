@@ -62,8 +62,12 @@ firebase.initializeApp(config);
    let cartitems=localStorage.getItem("productsincart");
    cartitems=JSON.parse(cartitems);
    console.log(cartitems);
+   const data=[];
+   Object.values(cartitems).map(item=>{
+data.push({Test:item.Test,Price:item.Price,Incart:item.inCart,Total:item.inCart*item.Price})
+   })
    const tempgref=firebase.database().ref('temp');
-tempgref.set(cartitems);
+tempgref.set(data);
  }
 
   </script>
