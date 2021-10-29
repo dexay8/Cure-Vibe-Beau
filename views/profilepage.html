@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="/css/calculatorspage.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/css/shoppage.css">
     <title>Document</title>
-    <h1>Health Calculator </h1>
+    <h1>Shop page </h1>
 </head>
 <body>
-  <!--------------------------------------------------BASE HOMEPAGE HTML ENDS--------------------------------------------------------------> 
+    <!--------------------------------------------------BASE HOMEPAGE HTML ENDS--------------------------------------------------------------> 
   <div id="logo" class="header">
     <img src="/images/bgnew.jpg" alt="">
 </div>
@@ -92,28 +92,5 @@ function menuBtnChange() {
 }
 </script>
 <!--------------------------------------------------BASE HOMEPAGE HTML ENDS-------------------------------------------------------------->
-  <div id ="main">
-    <h3><b>W</b>aist To <b>H</b>ip <b>R</b>atio Calculator</h3>
-    <form class="form" id="form" onsubmit="return validateForm()">
-    <div class="row-one">
-      <input type="text" class="text-input" id="age" autocomplete="off" required/><p class="text">Age</p>
-      <label class="container">
-      <input type="radio" name="radio" id="f"><p class="text">Female</p>
-        <span class="checkmark"></span>
-      </label>
-      <label class="container">
-      <input type="radio" name="radio" id="m"><p class="text">Male</p>
-        <span class="checkmark"></span>
-      </label>
-      </div>
-    
-    <div class="row-two">
-      <input type="text" class="text-input" id="waist" autocomplete="off" required><p class="text">Waist (cm)</p>
-      <input type="text" class="text-input" id="weight" autocomplete="off" required><p class="text">Hip (cm)</p>
-    </div>
-    <button type="button" id="submit">Submit</button>
-    </form>
-  </div>
-    <script src="/js/bmi.js"></script>
 </body>
 </html>
