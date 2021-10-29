@@ -46,8 +46,8 @@ app.get('/',function(req,res){
     res.sendFile(path.join(__dirname+'/views/whr.html'));
     //__dirname : It will resolve to your project folder.
   });
-  app.get('/report',function(req,res){
-    res.sendFile(path.join(__dirname+'/views/reportpage.html'));
+  app.get('/profile',function(req,res){
+    res.sendFile(path.join(__dirname+'/views/profilepage.html'));
     //__dirname : It will resolve to your project folder.
   });
   app.get('/checkout',function(req,res){
