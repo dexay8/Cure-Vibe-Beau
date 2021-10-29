@@ -210,10 +210,10 @@ var sum=0;
       item.Incart,
       item.Total+" Rs"
     );
-sum=sum+item.cost;
+sum=sum+item.Total;
+
     generateHr(doc, position + 20);
   }
-
   const subtotalPosition = invoiceTableTop + (i + 1) * 30;
   generateTableRow(
     doc,
@@ -221,7 +221,6 @@ sum=sum+item.cost;
     "",
     "",
     "Total",
-    "",
     sum+" Rs"
   );
 
