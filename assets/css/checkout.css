@@ -247,7 +247,18 @@ body{
   }
   }
   /*-------------------------- BASE HOMEPAGE CSS ENDS-------------- */
-  
+.checkoutcontainer{
+  margin-left: 80px;
+}
+button{
+  float: right;
+  margin-right: 100px ;
+  padding:8px;
+  background: teal;
+  color: white;
+  border: 10px;
+  border-radius: 20px;
+}
 .price span{
 color:blue;
 }
