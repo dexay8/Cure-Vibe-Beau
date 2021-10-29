@@ -29,7 +29,44 @@
     <!-- "grandtotal" class-->
 </div>
     </div>
-    <button onclick="deletelocalstorage()">Download invoice</button>
+    <button onclick="downloadinvoice()">Download invoice</button>
     <script src='/js/main.js'></script>
+
+
+
+
+
+
+
+    <!---------------------------------------------------------------FIREBASE---------------------------------------------->
+    <script src=
+    "https://www.gstatic.com/firebasejs/3.7.4/firebase.js">
+        </script>
+     <script>   
+       
+       const config = {
+  apiKey: "AIzaSyDW5-Szhn5ruui9xPVGqDGQ5ObQ2VYma8k",
+  authDomain: "cure-vibe-beau.firebaseapp.com",
+  databaseURL: "https://cure-vibe-beau-default-rtdb.firebaseio.com",
+  projectId: "cure-vibe-beau",
+  storageBucket: "cure-vibe-beau.appspot.com",
+  messagingSenderId: "262834749571",
+  appId: "1:262834749571:web:09da42fa5c78eee9b0dbb6",
+  measurementId: "G-SXR0ZGKPD7"
+};
+firebase.initializeApp(config);
+ const auth = firebase.auth();
+ const firestore = firebase.firestore();
+
+ function downloadinvoice(){
+   let cartitems=localStorage.getItem("productsincart");
+   cartitems=JSON.parse(cartitems);
+   console.log(cartitems);
+   const tempgref=firebase.database().ref('temp');
+tempgref.set(cartitems);
+ }
+
+  </script>
+
 </body>
 </html>
