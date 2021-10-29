@@ -38,19 +38,19 @@ function countBmi(){
     result = 'Extremely obese';
      }
   
+  var h1 = document.createElement("h1");
   var h2 = document.createElement("h2");
-  var h3 = document.createElement("h3");
 
   var t = document.createTextNode(result);
   var b = document.createTextNode('BMI: ');
   var r = document.createTextNode(parseFloat(bmi).toFixed(2));
   
-  h2.appendChild(t);
-  h3.appendChild(b);
-  h3.appendChild(r);
+  h1.appendChild(t);
+  h2.appendChild(b);
+  h2.appendChild(r);
   
+  document.body.appendChild(h1);
   document.body.appendChild(h2);
-  document.body.appendChild(h3);
   document.getElementById("submit").removeEventListener("click", countBmi);
   document.getElementById("submit").removeEventListener("click", validateForm);
 }
