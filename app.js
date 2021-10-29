@@ -23,6 +23,14 @@ app.get('/',function(req,res){
     res.sendFile(path.join(__dirname+'/views/calculatorspage.html'));
     //__dirname : It will resolve to your project folder.
   });
+  app.get('/calculators/bmi',function(req,res){
+    res.sendFile(path.join(__dirname+'/views/bmi.html'));
+    //__dirname : It will resolve to your project folder.
+  });
+  app.get('/calculators/whr',function(req,res){
+    res.sendFile(path.join(__dirname+'/views/whr.html'));
+    //__dirname : It will resolve to your project folder.
+  });
   app.get('/report',function(req,res){
     res.sendFile(path.join(__dirname+'/views/reportpage.html'));
     //__dirname : It will resolve to your project folder.
