@@ -4,7 +4,6 @@ var hip = document.getElementById("hip");
 var male = document.getElementById("m");
 var female = document.getElementById("f");
 var form = document.getElementById("form");
-var result = '';
 
 function validateForm(){
   if(age.value=='' || waist.value=='' || hip.value=='' || (male.checked==false && female.checked==false)){
@@ -26,27 +25,27 @@ function countWHR(){
   form.reset();
   var whr = (Number(p[1])/(Number(p[2])));
       
-  var result = '';
+  var result ="";
   if(male.checked){
        if(whr<0.95){
-      result = 'Low Health Risk';
+      result = "Low Health Risk";
        }
        else if(0.95<=whr&&whr<1.00){
-      result = 'Moderate Health Risk';
+      result = "Moderate Health Risk";
        }
        else if(1.00<=whr){
-      result = 'High Health Risk';
+      result = "High Health Risk";
        }
   }
   else if(female.checked){
     if(whr<0.80){
-   result = 'Low Health Risk';
+   result = "Low Health Risk";
     }
     else if(0.80<=whr&&whr<0.85){
-   result = 'Moderate Health Risk';
+   result = "Moderate Health Risk";
     }
     else if(0.85<=whr){
-   result = 'High Health Risk';
+   result = "High Health Risk";
     }
 }
   

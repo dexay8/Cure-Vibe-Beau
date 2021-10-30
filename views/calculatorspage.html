@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <link rel="icon" href="/images/favi.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/homepage.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <title>Cure Vibe Beau-Home</title>
+</head>
+
+<body>
+<!--------------------------------------------------BASE HOMEPAGE HTML ENDS--------------------------------------------------------------> 
+    <div id="logo" class="header">
+        <img src="/images/bgnew.jpg" alt="">
+    </div>
+    <div class="sidebar">
+      <div class="logo-details">
+          <i class='bx bx-menu' id="btn" ></i>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <a href="#">
+            <i class='bx bx-plus-medical bx-flip-horizontal' ></i>
+            <span class="links_name"> Medicines & Equipments</span>
+          </a>
+           <span class="tooltip">Medicines and Equipments</span>
+        </li>
+        <li>
+         <a href="#">
+          <i class='bx bx-test-tube bx-flip-horizontal' ></i>
+           <span class="links_name">Lab tests</span>
+         </a>
+         <span class="tooltip">Lab tests</span>
+       </li>
+       <li>
+         <a href="#">
+           <i class='bx bx-pie-chart-alt-2' ></i>
+           <span class="links_name">Calculators</span>
+         </a>
+         <span class="tooltip">Calculators</span>
+       </li>
+       <li>
+         <a href="#">
+           <i class='bx bx-cart-alt' ></i>
+           <span class="links_name">Checkout Cart</span>
+         </a>
+         <span class="tooltip">Checkout Cart</span>
+       </li>
+       <li>
+         <a href="#">
+          <i class='bx bx-user'></i>
+           <span class="links_name">Profile</span>
+         </a>
+         <span class="tooltip">Profile</span>
+       </li>
+       <li class="profile">
+        <div class="profile-details">
+          <div class="name_job">
+            <div class="name">CURE VIBE BEAU Ⓒ 2021</div>
+            <div class="job">Pharmacy and Pathology Labs</div>
+          </div>
+        </div>
+        <i class='bx bx-log-out' id="log_out" ></i>
+    </li>
+   </ul>
+    </div>
+    
+    <script>
+    let sidebar = document.querySelector(".sidebar");
+    let closeBtn = document.querySelector("#btn");
+    let searchBtn = document.querySelector(".bx-search");
+  
+    closeBtn.addEventListener("click", ()=>{
+      sidebar.classList.toggle("open");
+      menuBtnChange();//calling the function(optional)
+    });
+  
+    searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+      sidebar.classList.toggle("open");
+      menuBtnChange(); //calling the function(optional)
+    });
+  
+    // following are the code to change sidebar button(optional)
+    function menuBtnChange() {
+     if(sidebar.classList.contains("open")){
+       closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+
+     }else {
+       closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+     }
+    }
+    </script>
+<!--------------------------------------------------BASE HOMEPAGE HTML ENDS-------------------------------------------------------------->
+    
+   
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
