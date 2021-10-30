@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="/images/favi.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
     <link rel="stylesheet" href="/css/calculatorspage.css">
@@ -75,11 +76,6 @@ let searchBtn = document.querySelector(".bx-search");
 closeBtn.addEventListener("click", ()=>{
   sidebar.classList.toggle("open");
   menuBtnChange();//calling the function(optional)
-});
-
-searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
-  sidebar.classList.toggle("open");
-  menuBtnChange(); //calling the function(optional)
 });
 
 // following are the code to change sidebar button(optional)

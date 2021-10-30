@@ -1,57 +1,69 @@
 var age = document.getElementById("age");
-var height = document.getElementById("height");
-var weight = document.getElementById("weight");
+var waist = document.getElementById("waist");
+var hip = document.getElementById("hip");
 var male = document.getElementById("m");
 var female = document.getElementById("f");
 var form = document.getElementById("form");
+var result = '';
 
 function validateForm(){
-  if(age.value=='' || height.value=='' || weight.value=='' || (male.checked==false && female.checked==false)){
+  if(age.value=='' || waist.value=='' || hip.value=='' || (male.checked==false && female.checked==false)){
     alert("All fields are required!");
-    document.getElementById("submit").removeEventListener("click", countBmi);
+    document.getElementById("submit").removeEventListener("click", countWHR);
   }else{
-    countBmi();
+    countWHR();
   }
 }
 document.getElementById("submit").addEventListener("click", validateForm);
 
-function countBmi(){
-  var p = [age.value, height.value, weight.value];
+function countWHR(){
+  var p = [age.value, waist.value, hip.value];
   if(male.checked){
     p.push("male");
   }else if(female.checked){
     p.push("female");
   }
   form.reset();
-  var bmi = Number(p[2])/(Number(p[1])/100*Number(p[1])/100);
+  var whr = (Number(p[1])/(Number(p[2])));
       
   var result = '';
-  if(bmi<18.5){
-    result = 'Underweight';
-     }else if(18.5<=bmi&&bmi<=24.9){
-    result = 'Healthy';
-     }else if(25<=bmi&&bmi<=29.9){
-    result = 'Overweight';
-     }else if(30<=bmi&&bmi<=34.9){
-    result = 'Obese';
-     }else if(35<=bmi){
-    result = 'Extremely obese';
-     }
+  if(male.checked){
+       if(whr<0.95){
+      result = 'Low Health Risk';
+       }
+       else if(0.95<=whr&&whr<1.00){
+      result = 'Moderate Health Risk';
+       }
+       else if(1.00<=whr){
+      result = 'High Health Risk';
+       }
+  }
+  else if(female.checked){
+    if(whr<0.80){
+   result = 'Low Health Risk';
+    }
+    else if(0.80<=whr&&whr<0.85){
+   result = 'Moderate Health Risk';
+    }
+    else if(0.85<=whr){
+   result = 'High Health Risk';
+    }
+}
   
-  var h1 = document.createElement("h1");
   var h2 = document.createElement("h2");
+  var h3 = document.createElement("h3");
 
   var t = document.createTextNode(result);
-  var b = document.createTextNode('BMI: ');
-  var r = document.createTextNode(parseFloat(bmi).toFixed(2));
+  var b = document.createTextNode('Waist To Hip Ratio: ');
+  var r = document.createTextNode(parseFloat(whr).toFixed(2));
   
-  h1.appendChild(t);
-  h2.appendChild(b);
-  h2.appendChild(r);
+  h2.appendChild(t);
+  h3.appendChild(b);
+  h3.appendChild(r);
   
-  document.body.appendChild(h1);
   document.body.appendChild(h2);
-  document.getElementById("submit").removeEventListener("click", countBmi);
+  document.body.appendChild(h3);
+  document.getElementById("submit").removeEventListener("click", countWHR);
   document.getElementById("submit").removeEventListener("click", validateForm);
 }
-document.getElementById("submit").addEventListener("click", countBmi);
+document.getElementById("submit").addEventListener("click", countWHR);

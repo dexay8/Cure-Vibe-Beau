@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/images/favi.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
     <link rel="stylesheet" href="/css/calculatorspage.css">
     
@@ -77,12 +78,6 @@ closeBtn.addEventListener("click", ()=>{
   sidebar.classList.toggle("open");
   menuBtnChange();//calling the function(optional)
 });
-
-searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
-  sidebar.classList.toggle("open");
-  menuBtnChange(); //calling the function(optional)
-});
-
 // following are the code to change sidebar button(optional)
 function menuBtnChange() {
  if(sidebar.classList.contains("open")){
@@ -111,11 +106,11 @@ function menuBtnChange() {
     
     <div class="row-two">
       <input type="text" class="text-input" id="waist" autocomplete="off" required><p class="text">Waist (cm)</p>
-      <input type="text" class="text-input" id="weight" autocomplete="off" required><p class="text">Hip (cm)</p>
+      <input type="text" class="text-input" id="hip" autocomplete="off" required><p class="text">Hip (cm)</p>
     </div>
     <button type="button" id="submit">Submit</button>
     </form>
   </div>
-    <script src="/js/bmi.js"></script>
+    <script src="/js/whr.js"></script>
 </body>
 </html>
